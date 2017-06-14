@@ -18,3 +18,4 @@ WHERE category_id=1
 SELECT COUNT(*)
 FROM JobAd
 JOIN JobType ON JobAd.jobType_id=JobType.ID
+WHERE JobAd.jobType_id=1

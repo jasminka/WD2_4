@@ -1,0 +1,20 @@
+SELECT Region.name, COUNT(*)
+FROM Company
+JOIN  Region ON Company.region_id=Region.ID
+JOIN JobAd ON JobAd.company_id=Company.ID
+GROUP BY Region.ID
+
+SELECT Company.name
+FROM JobAd
+JOIN Company ON Company.ID=JobAd.company_id
+WHERE JobAd.category_id=4
+
+SELECT user_id, name, lastName
+FROM UserJobAd
+JOIN JobAd ON UserJobAd.job_id=JobAd.ID
+JOIN User ON UserJobAd.user_id=User.ID
+WHERE category_id=1
+
+SELECT COUNT(*)
+FROM JobAd
+JOIN JobType ON JobAd.jobType_id=JobType.ID

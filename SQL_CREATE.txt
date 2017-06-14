@@ -1,0 +1,47 @@
+
+CREATE TABLE JobAd (
+			ID INTEGER PRIMARY KEY AUTOINCREMENT,
+			company_id INTEGER,
+			created_on DATE,
+			expires_on DATE,
+			description TEXT,
+			jobType_id INTEGER,
+			category_id INTEGER
+)
+
+CREATE TABLE Company (
+			ID INTEGER PRIMARY KEY AUTOINCREMENT,
+			name TEXT,
+			url TEXT,
+			region_id INTEGER
+)
+
+CREATE TABLE User (
+			ID INTEGER PRIMARY KEY AUTOINCREMENT,
+			name TEXT,
+			lastName TEXT,
+			email TEXT,
+			dob DATE,
+			memberSince DATE,
+			password TEXT,
+			username TEXT,
+			region_id INTEGER,
+			company_id INTEGER
+)
+
+CREATE TABLE Category (
+			ID INTEGER PRIMARY KEY AUTOINCREMENT,
+			name TEXT
+)
+
+CREATE TABLE JobType (
+			ID INTEGER PRIMARY KEY AUTOINCREMENT,
+			type TEXT
+)
+
+CREATE TABLE UserJobAd (
+			ID INTEGER PRIMARY KEY AUTOINCREMENT,
+			user_id INTEGER,
+			jobAd_id INTEGER
+)
+
